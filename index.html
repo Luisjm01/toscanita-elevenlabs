@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toscanita - Guía en Toscana y Roma</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fefefe;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      background: #8f5e3b;
+      color: white;
+      width: 100%;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    .bot-container {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .avatar {
+      width: 150px;
+      height: 150px;
+      background: url('https://i.imgur.com/9xGvJHh.png') center/cover no-repeat;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    .talk-button {
+      margin-top: 2rem;
+      background-color: #8f5e3b;
+      border: none;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .talk-button:hover {
+      background-color: #a76f4a;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Bienvenido a Toscanita 🌻
+  </header>
+
+  <div class="bot-container">
+    <div class="avatar"></div>
+
+    <elevenlabs-convai agent-id="TU_AGENT_ID_AQUI"></elevenlabs-convai>
+    <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+  </div>
+</body>
+</html>
