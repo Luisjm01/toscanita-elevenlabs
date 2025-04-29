@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Agente Conversacional</title>
-    <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
-        /* Dale algo de espacio o estilo al widget si es necesario */
-        elevenlabs-convai {
-            width: 90%; /* Ajusta según necesites */
-            max-width: 500px; /* Ajusta según necesites */
-            height: 70vh; /* Ajusta la altura */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habla con Toscanita</title>
+  <style>
+    body {
+      background: url('https://i.ibb.co/ckqLfNB/val-d-orcia-dorado.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #4B3621;
+      text-shadow: 1px 1px 2px white;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 40px;
+    }
+
+    elevenlabs-convai {
+      width: 320px;
+      height: 440px;
+    }
+  </style>
 </head>
 <body>
+  <h1>Habla con Toscanita</h1>
 
-    <h1>Habla con mi Agente</h1>
-
-    <elevenlabs-convai agent-id="e5S3VkABSLxjynYS06q0"></elevenlabs-convai>
-    <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
-
-    </body>
+  <elevenlabs-convai agent-id="e5S3VkABSLxjynYS06q0"></elevenlabs-convai>
+  <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+</body>
 </html>
