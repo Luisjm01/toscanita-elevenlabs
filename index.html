@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Toscanita</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/@11labs/elevenlabs-convai@latest/dist/index.global.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toscanita</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <img id="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Tuscany_Landscape.jpg/640px-Tuscany_Landscape.jpg" alt="Toscanita Avatar">
-    <div id="connectionStatus">Conectando...</div>
-  </div>
+    <div class="container">
+        <div class="avatar-container">
+            <img src="https://i.ibb.co/DRgPZTn/toscanita-avatar.png" alt="Toscanita Avatar" class="avatar">
+        </div>
+        <h1 class="title">Bienvenido a Toscanita 🌻</h1>
+        <p id="connectionStatus" class="status">Conectando...</p>
+        <div id="widget"></div> <!-- Aquí aparece el widget de ElevenLabs -->
+    </div>
 
-  <elevenlabs-convai
-    agent-id="e5S3VkABSLxjynYS06q0"
-    enable-transcription
-    style="margin-top: 20px; width: 100%;">
-  </elevenlabs-convai>
+    <!-- Script del widget oficial de ElevenLabs -->
+    <script src="https://cdn.elevenlabs.io/conversational-ai/widget/elevenlabs-conversational-ai-widget.min.js"></script>
 
-  <script src="scripts.js"></script>
+    <!-- Tu script personalizado -->
+    <script src="scripts.js"></script>
 </body>
 </html>
