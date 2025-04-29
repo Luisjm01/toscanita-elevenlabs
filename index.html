@@ -1,50 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habla con Toscanita</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: url('https://i.ibb.co/CbP6kKt/toscana-fondo.jpg') no-repeat center center fixed;
-            background-size: cover;
-            background-blend-mode: overlay;
-            background-color: rgba(255, 255, 255, 0.7);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-        }
-
-        h1 {
-            color: #5a3e1b;
-            font-size: 2.8em;
-            margin-bottom: 20px;
-        }
-
-        #widget {
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Habla con Toscanita 🌻</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Helvetica Neue", sans-serif;
+      background: url('toscana-fondo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: brightness(85%) blur(2px);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #5C4033; /* color café suave */
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+    }
+    #widget {
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-    <h1>Habla con Toscanita 🌻</h1>
-    <div id="widget"></div>
+  <h1>Habla con Toscanita 🌻</h1>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const widget = new ConversationWidget({
-                agentId: "e5S3VkABSLxjynYS06q0", // tu verdadero AGENT_ID
-                selector: "#widget",
-                theme: "light",
-                locale: "es" // Para ponerlo en español
-            });
-        });
-    </script>
+  <div id="widget"></div>
+
+  <script src="https://cdn.elevenlabs.io/conversational-ai-widget.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const widget = new ConversationWidget({
+        agentId: "e5S3VkABSLxjynYS06q0", // Reemplaza por tu agentID si es necesario
+        selector: "#widget",
+        theme: "light"
+      });
+    });
+  </script>
 </body>
 </html>
