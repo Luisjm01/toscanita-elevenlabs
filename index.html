@@ -1,51 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Habla con Toscanita</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background: url('toscana-fondo.jpg') no-repeat center center fixed;
-      background-size: cover;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      color: #5a3921;
-      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin: 0.5em;
-    }
-    .sunflower {
-      font-size: 2rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Agente Conversacional</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        /* Dale algo de espacio o estilo al widget si es necesario */
+        elevenlabs-convai {
+            width: 90%; /* Ajusta según necesites */
+            max-width: 500px; /* Ajusta según necesites */
+            height: 70vh; /* Ajusta la altura */
+        }
+    </style>
 </head>
 <body>
 
-  <h1>Habla con<br>Toscanita <span class="sunflower">🌻</span></h1>
+    <h1>Habla con mi Agente</h1>
 
-  <div id="widget"></div>
+    <elevenlabs-convai agent-id="e5S3VkABSLxjynYS06q0"></elevenlabs-convai>
+    <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
 
-  <!-- Carga el WIDGET correcto -->
-  <script src="https://cdn.elevenlabs.io/conversational-ai/1.0.0/conversational-ai-widget.min.js"></script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const widget = new ConversationWidget({
-        agentId: "e5S3VkABSLxjynYS06q0", // <-- Tu verdadero agentId
-        selector: "#widget",
-        theme: "light",
-        initialMessage: "¡Hola! ¿Sobre qué te gustaría conversar hoy?"
-      });
-    });
-  </script>
-
-</body>
+    </body>
 </html>
