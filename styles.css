@@ -1,48 +1,46 @@
+/* style.css */
+
 body {
-  background-color: #fcebd5;
-  text-align: center;
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #f8f9fa, #e0e0e0);
   margin: 0;
-  padding: 20px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
 }
 
 h1 {
-  color: #8a4b32;
-}
-
-#avatar-container {
-  margin-top: 20px;
+  color: #333;
+  margin-top: 30px;
+  text-align: center;
 }
 
 #avatar {
+  margin-top: 20px;
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  object-fit: cover;
-  animation: float 3s ease-in-out infinite;
+  background: url('https://images.unsplash.com/photo-1607746882042-944635dfe10e') center/cover no-repeat;
+  animation: breathe 3s ease-in-out infinite;
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
+@keyframes breathe {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
 
-#talk-button {
+#connectionStatus {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Opcional: estiliza el contenedor del agente */
+.elevenlabs-convai-container {
   margin-top: 30px;
-  padding: 15px 30px;
-  font-size: 18px;
-  background-color: #8a4b32;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-#talk-button:hover {
-  background-color: #a35e3e;
+  width: 100%;
+  max-width: 400px;
 }

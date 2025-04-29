@@ -2,52 +2,23 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bienvenido a Toscanita</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background: linear-gradient(to bottom, #e6ecf5, #f2e4e4);
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-    }
-    h1 {
-      color: #5a3e36;
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
-    img {
-      width: 120px;
-      height: 120px;
-      animation: bounce 2s infinite;
-    }
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-      }
-      40% {
-        transform: translateY(-20px);
-      }
-      60% {
-        transform: translateY(-10px);
-      }
-    }
-  </style>
-  <script>
-    window.conversationalAiConfig = {
-      agentId: "e5S3VkABSLxjynYS06q0" // Reemplaza esto por tu verdadero AGENT_ID
-    };
-  </script>
-  <script src="https://cdn.elevenlabs.io/conversational-ai/0.3.8/widget.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toscanita</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@11labs/elevenlabs-convai@latest/dist/index.global.js"></script>
 </head>
 <body>
-  <h1>Bienvenido a Toscanita 🌻</h1>
-  <img src="https://i.ibb.co/vPJ7FDD/toscanita-avatar.png" alt="Toscanita Avatar">
+  <div class="container">
+    <img id="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Tuscany_Landscape.jpg/640px-Tuscany_Landscape.jpg" alt="Toscanita Avatar">
+    <div id="connectionStatus">Conectando...</div>
+  </div>
+
+  <elevenlabs-convai
+    agent-id="e5S3VkABSLxjynYS06q0"
+    enable-transcription
+    style="margin-top: 20px; width: 100%;">
+  </elevenlabs-convai>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
