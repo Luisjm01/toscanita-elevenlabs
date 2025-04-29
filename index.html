@@ -18,32 +18,49 @@
             background-repeat: no-repeat;
         }
 
-        h1 {
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        /* Contenedor del título */
+        .title-container {
             position: absolute;
-            top: 10%;
+            top: 5%;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 2rem;
+            text-align: center;
         }
 
-        /* Widget visible desde el inicio */
-        #chat-container {
-    display: block; /* Mantenerlo visible */
-    position: absolute;
-    bottom: 5%;
-    left: 5%; /* Cambia left por right */
-}
+        /* Estilo de "Toscanita" */
+        .title-main {
+            color: #E2725B; /* Terracota */
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
 
+        /* Estilo de "Tu asistente virtual" */
+        .title-sub {
+            color: #8D6E63; /* Marrón suave */
+            font-size: 1rem;
+            font-weight: normal;
+            margin-top: -8px;
+        }
+
+        /* Widget en la esquina superior derecha */
+        #chat-container {
+            display: block;
+            position: absolute;
+            top: 5%;
+            right: 5%;
         }
     </style>
 </head>
 <body>
 
-    <h1>Toscanita - Tu asistente virtual</h1>
+    <!-- Contenedor del título -->
+    <div class="title-container">
+        <div class="title-main">Toscanita</div>
+        <div class="title-sub">Tu asistente virtual</div>
+    </div>
 
-    <!-- Widget visible desde el inicio -->
+    <!-- Widget visible desde el inicio en la esquina superior derecha -->
     <div id="chat-container">
         <elevenlabs-convai agent-id="e5S3VkABSLxjynYS06q0"></elevenlabs-convai>
     </div>
