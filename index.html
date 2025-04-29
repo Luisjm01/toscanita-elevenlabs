@@ -3,47 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Habla con Toscanita 🌻</title>
+  <title>Habla con Toscanita</title>
   <style>
     body {
       margin: 0;
       height: 100vh;
+      background: url('toscana-fondo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      background-image: url('toscana-fondo.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      font-family: Arial, sans-serif;
-      color: #5a3921; /* Color café elegante */
-      text-shadow: 1px 1px 2px #ffffffaa; /* Sombra clara para que resalte sobre el fondo */
+      color: #5a3921;
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
     }
-
     h1 {
       font-size: 2.5rem;
-      margin-bottom: 20px;
+      margin: 0.5em;
+    }
+    .sunflower {
+      font-size: 2rem;
     }
   </style>
 </head>
 <body>
-  <h1>Habla con <strong>Toscanita</strong> 🌻</h1>
 
-  <!-- Aquí carga el widget de ElevenLabs -->
+  <h1>Habla con<br>Toscanita <span class="sunflower">🌻</span></h1>
+
   <div id="widget"></div>
 
+  <!-- Carga el WIDGET correcto -->
   <script src="https://cdn.elevenlabs.io/conversational-ai/1.0.0/conversational-ai-widget.min.js"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const widget = new ConversationWidget({
-        agentId: "e5S3VkABSLxjynYS06q0", // Tu Agent ID real
+        agentId: "e5S3VkABSLxjynYS06q0", // <-- Tu verdadero agentId
         selector: "#widget",
         theme: "light",
-        lang: "es" // Cambia el idioma del widget a español
+        initialMessage: "¡Hola! ¿Sobre qué te gustaría conversar hoy?"
       });
     });
   </script>
+
 </body>
 </html>
