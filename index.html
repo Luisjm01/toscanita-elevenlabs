@@ -22,27 +22,34 @@
             color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             position: absolute;
-            top: 10%; /* Lo sube más arriba */
+            top: 10%;
             left: 50%;
             transform: translateX(-50%);
             font-size: 2rem;
         }
 
-        /* Ajustes al widget de conversación */
-        elevenlabs-convai {
-            width: 90%;
-            max-width: 500px;
-            height: 70vh;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
+        /* Ocultar el widget de inicio */
+        #chat-container {
+            display: none;
+            position: absolute;
+            bottom: 10%;
         }
 
-        /* Mueve el widget de ayuda más arriba */
-        .need-help-widget {
+        /* Botón de micrófono */
+        #mic-button {
             position: absolute;
-            top: 20%; /* Ajusta la posición */
-            right: 20px;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        #mic-button img {
+            width: 50px;
+            height: 50px;
         }
     </style>
 </head>
@@ -50,8 +57,23 @@
 
     <h1>Soy Toscanita tu asistente virtual</h1>
 
-    <elevenlabs-convai agent-id="e5S3VkABSLxjynYS06q0"></elevenlabs-convai>
+    <!-- Botón con ícono de micrófono -->
+    <div id="mic-button" onclick="mostrarChat()">
+        <img src="https://raw.githubusercontent.com/Luisjm01/toscanita-elevenlabs/main/microfono.png" alt="Activar chat">
+    </div>
+
+    <!-- Widget oculto -->
+    <div id="chat-container">
+        <elevenlabs-convai agent-id="e5S3VkABSLxjynYS06q0"></elevenlabs-convai>
+    </div>
+
     <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+    <script>
+        function mostrarChat() {
+            document.getElementById("chat-container").style.display = "block";
+            document.getElementById("mic-button").style.display = "none"; // Oculta el botón después de activar el chat
+        }
+    </script>
 
 </body>
 </html>
