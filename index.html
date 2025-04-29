@@ -10,18 +10,39 @@
             display: flex; 
             justify-content: center; 
             align-items: center; 
+            flex-direction: column;
             min-height: 100vh; 
             background-image: url('https://raw.githubusercontent.com/Luisjm01/toscanita-elevenlabs/main/toscana-fondo.jpg'); 
             background-size: cover; 
             background-position: center; 
             background-repeat: no-repeat;
         }
-        
-        /* Dale algo de espacio o estilo al widget si es necesario */
+
+        h1 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 10%; /* Lo sube más arriba */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+        }
+
+        /* Ajustes al widget de conversación */
         elevenlabs-convai {
-            width: 90%; /* Ajusta según necesites */
-            max-width: 500px; /* Ajusta según necesites */
-            height: 70vh; /* Ajusta la altura */
+            width: 90%;
+            max-width: 500px;
+            height: 70vh;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Mueve el widget de ayuda más arriba */
+        .need-help-widget {
+            position: absolute;
+            top: 20%; /* Ajusta la posición */
+            right: 20px;
         }
     </style>
 </head>
